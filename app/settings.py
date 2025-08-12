@@ -40,11 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'rest_framework_simplejwt',
+    'rest_framework_simplejwt',  # JWT authentication
 
-
-    #'authentication',  # Your custom authentication app
-    'genres',
+    'authapp',  # Your custom authentication app
+    'genres',   #
     'movies',  # Your custom movies app
     'reviews',  # Your custom reviews app
     'actors',  # Your custom actors app

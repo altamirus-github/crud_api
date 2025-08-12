@@ -8,7 +8,7 @@ from reviews.models import Review
 
 
 class MovieCreateListView(generics.ListCreateAPIView):
-    # permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
+    permission_classes = (IsAuthenticated,)
     queryset = Movie.objects.all()
 
     def get_serializer_class(self):
@@ -18,7 +18,7 @@ class MovieCreateListView(generics.ListCreateAPIView):
 
 
 class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    # permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
+    permission_classes = (IsAuthenticated,)
     queryset = Movie.objects.all()
 
     def get_serializer_class(self):
@@ -28,7 +28,7 @@ class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class MovieStatsView(views.APIView):
-    # permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
+    permission_classes = (IsAuthenticated,)
     queryset = Movie.objects.all()
 
     def get(self, request):
