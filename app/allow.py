@@ -33,5 +33,3 @@ class GlobalAllowAny(permissions.BasePermission):
             'DELETE': 'delete'
         }
         return method_action.get(method, '')
-    
-
